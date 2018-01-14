@@ -1,0 +1,384 @@
+//回到顶部按钮
+div.jkj-gotoTop {
+  display: none;
+  background-color: #FDFDFD;
+  border: 1px solid #E1E1E1;
+  position: fixed;
+  bottom: 0;
+  right: 5px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  a {
+    color: #DBDBDC;
+    font-size: 30px;
+  }
+
+}
+
+//中间的吸顶条
+.jkj-subMenu {
+  height: 90px;
+  padding: 15px 0;
+  #jkj-topNav {
+    box-sizing: border-box;
+    z-index: 10000;
+    width: 100%;
+    padding-left: 200px;
+    height: 60px;
+  }
+  width: 100%;
+
+  box-sizing: border-box;
+  line-height: 60px;
+  a {
+    display: inline-block;
+    width: 200px;
+  }
+  .shopItem{
+    float: right;
+  }
+  .show{
+    display: inline-block;
+  }
+  .hide{
+    display: none;
+  }
+}
+
+//这是头部--header部分
+header.jkj-header {
+  .jkj-box {
+    width: 1220px;
+    height: 500px;
+    margin: 0 auto;
+    /*   margin-top: 80px;*/
+
+    perspective: 1220px;
+    -webkit-perspective: 1220px;
+  }
+
+  .jkj-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: .3s;
+
+    transform: translateZ(20px);
+    -webkit-transform: translateZ(20px);
+    //header的轮播图部分
+    .img1 {
+      border-radius: 10px;
+      background-color: #C5B7B0;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      //下面的图片
+      & > div:nth-child(1) {
+        text-align: center;
+        img:nth-child(1) {
+          height: 500px;
+          display: inline-block;
+        }
+        img:nth-child(2) {
+          width: 258px;
+          height: 300px;
+          position: absolute;
+          bottom: 0;
+          left: 10px;
+        }
+      }
+      //上面的图片
+      & > div:nth-child(2) {
+        border-radius: 10px;
+        width: 300px;
+        height: 500px;
+        background-color: rgba(150, 0, 0, .8);
+        position: absolute;
+        right: 0;
+        top: -2px;
+        text-align: center;
+        color: #ffffcc;
+      }
+      .extrude {
+        display: block;
+        font-size: 20px;
+        line-height: 500px;
+        opacity: .8;
+        transform: translateZ(100px);
+        -webkit-transform: translateZ(100px);
+      }
+
+    }
+  }
+
+}
+
+article {
+  text-align: center;
+  //这里共用的是头部
+  .shopTop {
+    width: 100%;
+    height: 60px;
+    background-color: #FAFAFA;
+    font-size: 18px;
+    font-weight: 400;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    & > div:nth-child(1) {
+      line-height: 60px;
+      float: left;
+      text-align: left;
+      width: 100px;
+      padding-left: 60px;
+    }
+    & > div:nth-child(2) {
+      line-height: 60px;
+      float: right;
+      text-align: right;
+      width: 200px;
+      padding-right: 60px;
+      a {
+        //总结:这里的inline-block会影响IE排版,
+       /* display: inline-block;*/
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  //section部分
+  section.jkj-shop {
+    margin-top: 40px;
+    display: inline-block;
+    width: 1220px;
+    height: 490px;
+    //口红  lipstick
+    div.shopMain1 {
+      height: 429px;
+      font-size: 0;
+      & > a {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 100%;
+        background-color: #fff;
+        border: 1px solid #E5E5E5;
+      }
+      & > a:nth-child(1) {
+        width: 50%;
+        border-bottom-left-radius: 10px;
+        background-color: black;
+      }
+      & > a:nth-child(2) {
+        width: 25%;
+        background: #fff url("../img/firsrPage/lipstick/lipstick1.png") no-repeat center center;
+        background-size: 70% auto;
+      }
+      & > a:nth-child(3) {
+        width: 25%;
+        background: #fff url("../img/firsrPage/lipstick/lipstick2.png") no-repeat center center;
+        background-size: 50% auto;
+      }
+      & > a:nth-child(3) {
+        border-bottom-right-radius: 10px;
+      }
+
+      & > a:hover {
+        box-shadow: inset 0 0 10px 1px #ccc;
+      }
+      & > a:nth-child(1):hover {
+        box-shadow: none;
+      }
+    }
+
+    //眼影  eyeShadow
+    div.shopMain2 {
+      height: 429px;
+      font-size: 0;
+      & > a {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 100%;
+        width: 25%;
+        border: 1px solid #E5E5E5;
+
+      }
+      & > a:nth-child(1) {
+        border-bottom-left-radius: 10px;
+        background: #fff url("../img/firsrPage/eyeShadow/eye1.jpg") no-repeat center center;
+        background-size: 100% auto;
+      }
+      & > a:nth-child(2) {
+        background: #fff url("../img/firsrPage/eyeShadow/eye2.jpg") no-repeat center center;
+        background-size: 90% auto;
+      }
+      & > a:nth-child(3) {
+        background: #fff url("../img/firsrPage/eyeShadow/eye3.jpg") no-repeat center center;
+        background-size: 90% auto;
+      }
+      & > a:nth-child(4) {
+        background: #fff url("../img/firsrPage/eyeShadow/eye4.jpg") no-repeat center center;
+        background-size: 90% auto;
+        border-bottom-right-radius: 10px;
+      }
+      & > a:hover {
+        box-shadow: inset 0 0 10px 1px #ccc;
+      }
+    }
+    //腮红
+    div.shopMain3 {
+      height: 429px;
+      font-size: 0;
+      & > a {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 100%;
+        width: 25%;
+        background-color: #fff;
+        border: 1px solid #E5E5E5;
+
+      }
+      & > a:nth-child(1) {
+        border-bottom-left-radius: 10px;
+        width: 25%;
+        background: #fff url("../img/firsrPage/blusher/saihong1.jpg") no-repeat center center;
+        background-size: 100% auto;
+      }
+      & > a:nth-child(2) {
+        width: 25%;
+        background: #fff url("../img/firsrPage/blusher/saihong3.jpg") no-repeat center center;
+        background-size: 90% auto;
+      }
+      & > a:nth-child(3) {
+        width: 50%;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        //轮播图的样式
+        section.jkj-lunbo {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+
+        section.jkj-lunbo .lunboBox {
+          width: 100%;
+          overflow: hidden;
+        }
+
+        section.jkj-lunbo .content {
+          width: 800%;
+          height: 100%;
+        }
+
+        section.jkj-lunbo .content img {
+          height: 426px;
+          width: 12.5%;
+          float: left;
+        }
+      }
+      & > a:hover {
+        box-shadow: inset 0 0 10px 1px #ccc;
+      }
+    }
+    //BB霜
+    div.shopMain4 {
+      height: 429px;
+      font-size: 0;
+      & > a {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 100%;
+        width: 25%;
+        background-color: #fff;
+        border: 1px solid #E5E5E5;
+
+      }
+      & > a:nth-child(1) {
+        background: #fff url("../img/firsrPage/bbCream/b1.jpg") no-repeat center center;
+        background-size: 90% auto;
+        border-bottom-left-radius: 10px;
+      }
+      & > a:nth-child(2) {
+        background: #fff url("../img/firsrPage/bbCream/b2.jpg") no-repeat center center;
+        background-size: 90% auto;
+      }
+      & > a:nth-child(3) {
+        background: #fff url("../img/firsrPage/bbCream/b3.jpg") no-repeat center center;
+        background-size: 90% auto;
+      }
+      & > a:nth-child(4) {
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
+        .jkj-rotateBox {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+
+          & > div.content {
+            //又是inline-block的问题
+            /*display: inline-block;*/
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 80%;
+            height: 80%;
+            transition: 1s;
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d; //问题出在  没有写这一句话
+
+            & > div {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-color: #fff;
+              //隐藏背面IE不支持的好像
+              backface-visibility: hidden;
+              -webkit-backface-visibility: hidden;
+              p {
+                font-size: 14px;
+              }
+            }
+            & > div:nth-child(1) {
+              transform: rotateY(0deg);
+              -webkit-transform: rotateY(0deg);
+            }
+            & > div:nth-child(2) {
+              transform: rotateY(180deg);
+              -webkit-transform: rotateY(180deg);
+            }
+          }
+
+        }
+        .jkj-rotateBox:hover .content {
+          transform: rotateY(180deg);
+        }
+      }
+      & > a:hover {
+        box-shadow: inset 0 0 10px 1px #ccc;
+      }
+    }
+
+  }
+
+  //轮转图的设置
+  section.jkj-round {
+    text-align: center;
+    margin-top: 200px;
+    width: 100%;
+    height: 200px;
+    margin-left: -80px;
+    ul#myRoundabout {
+      width: 60%;
+      display: inline-block;
+      li {
+        width: 380px;
+        height: 312px;
+      }
+    }
+  }
+}

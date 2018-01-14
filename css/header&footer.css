@@ -1,0 +1,266 @@
+nav {
+  z-index: 10000;
+  position: relative;
+  box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+  background-color: #090909;
+}
+nav a {
+  color: #333;
+}
+nav .lt {
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+nav .lt img {
+  margin-left: 10px;
+  width: 100px;
+  height: 100px;
+}
+nav .mid {
+  float: left;
+  width: 60%;
+  height: 100%;
+}
+nav .mid li {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+nav .mid li a {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  color: #c8c8c8;
+}
+nav .mid li a:hover {
+  color: #fff;
+}
+nav .rt {
+  color: white;
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+nav .rt > div.rtItem {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+nav .rt > div.rtItem > a {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  line-height: 100px;
+  color: #c8c8c8;
+  position: relative;
+}
+nav .rt > div.rtItem > a:hover {
+  color: #fff;
+}
+nav .rt > div.rtItem:nth-child(1):hover #subUser {
+  display: block;
+}
+nav .rt > div.rtItem:nth-child(1) #subUser {
+  display: none;
+  width: 170px;
+  height: 380px;
+  position: absolute;
+  top: 90px;
+  left: -17px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding-top: 20px;
+}
+nav .rt > div.rtItem:nth-child(1) #subUser .triangle {
+  border: 20px solid transparent;
+  border-bottom: 20px solid white;
+  position: absolute;
+  top: -38px;
+  left: 65px;
+}
+nav .rt > div.rtItem:nth-child(1) #subUser dl.userFace {
+  width: 100%;
+  height: 72px;
+  color: #7E7E7E;
+  font-size: 14px;
+}
+nav .rt > div.rtItem:nth-child(1) #subUser dl.userFace dd img {
+  overflow: hidden;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+nav .rt > div.rtItem:nth-child(1) #subUser ul {
+  padding-top: 30px;
+  width: 100%;
+  font-size: 14px;
+}
+nav .rt > div.rtItem:nth-child(1) #subUser ul li:hover {
+  background-color: #FAFAFA;
+}
+nav .rt > div.rtItem:nth-child(1) #subUser ul li {
+  box-sizing: border-box;
+  padding-right: 10px;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  border-top: 1px solid #F5F5F5;
+}
+nav .rt > div.rtItem:nth-child(1) #subUser ul li a {
+  box-sizing: border-box;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+nav .rt > div.rtItem:nth-child(1) #subUser ul li a span {
+  width: 20%;
+  height: 100%;
+  line-height: 45px;
+  display: inline-block;
+  text-align: left;
+}
+nav .rt > div.rtItem:nth-child(1) #subUser ul li:nth-child(6) {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.flyer-img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: fixed;
+  z-index: 99999;
+  border: 1px solid red;
+}
+footer.jkj-footer {
+  margin-top: 50px;
+  padding-top: 40px;
+  background-color: #fff;
+  width: 100%;
+  height: 240px;
+}
+footer.jkj-footer .footerTop {
+  height: 120px;
+}
+footer.jkj-footer .footerTop .footerService {
+  width: 70%;
+  float: left;
+  text-align: center;
+}
+footer.jkj-footer .footerTop .footerService > div {
+  display: inline-block;
+  float: left;
+  width: 33.3%;
+  height: 100%;
+}
+footer.jkj-footer .footerTop .footerService > div h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+}
+footer.jkj-footer .footerTop .footerService > div p span {
+  display: block;
+  color: #999;
+  font-size: 12px;
+  line-height: 22px;
+}
+footer.jkj-footer .footerTop .footerService > h3 {
+  display: block;
+}
+footer.jkj-footer .footerTop .footerService > div:nth-child(1):before {
+  content: '  ';
+  background: #fff url("../img/firsrPage/footer/icon1.png") no-repeat center center;
+  display: inline-block;
+  width: 96px;
+  height: 42px;
+}
+footer.jkj-footer .footerTop .footerService > div:nth-child(2):before {
+  content: '  ';
+  background: #fff url("../img/firsrPage/footer/icon2.png") no-repeat center center;
+  display: inline-block;
+  width: 96px;
+  height: 42px;
+}
+footer.jkj-footer .footerTop .footerService > div:nth-child(3):before {
+  content: '  ';
+  background: #fff url("../img/firsrPage/footer/icon3.png") no-repeat center center;
+  display: inline-block;
+  width: 96px;
+  height: 42px;
+}
+footer.jkj-footer .footerTop .onliveServer {
+  float: left;
+  width: 30%;
+  height: 100%;
+  text-align: right;
+  position: relative;
+  box-sizing: border-box;
+  padding-right: 30px;
+}
+footer.jkj-footer .footerTop .onliveServer > span {
+  color: #999;
+  font-size: 12px;
+}
+footer.jkj-footer .footerTop .onliveServer > p {
+  color: #00c3f5;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+footer.jkj-footer .footerTop .onliveServer > div > a {
+  height: 40px;
+  padding-left: 30px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  line-height: 40px;
+  color: #333;
+  border-radius: 2px;
+  margin-top: 3px;
+  display: inline-block;
+  font-size: 16px;
+}
+footer.jkj-footer .footerTop .onliveServer > div:hover img {
+  display: block;
+}
+footer.jkj-footer .footerTop .onliveServer img {
+  z-index: 100;
+  position: absolute;
+  left: 60px;
+  top: -90px;
+  display: none;
+}
+footer.jkj-footer .hr {
+  margin: 20px auto;
+  display: block;
+  width: 95%;
+}
+footer.jkj-footer .footBottom {
+  width: 100%;
+  color: #999;
+  text-align: left;
+  font-size: 12px;
+}
+footer.jkj-footer .footBottom a {
+  color: #999;
+  font-size: 12px;
+}
+footer.jkj-footer .footBottom .aboutUs {
+  box-sizing: border-box;
+  padding-left: 50px;
+}
+footer.jkj-footer .footBottom .aboutUs li {
+  display: inline-block;
+}
+footer.jkj-footer .footBottom .last {
+  box-sizing: border-box;
+  padding-left: 50px;
+}

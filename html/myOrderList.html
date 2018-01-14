@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/header&footer.css">
+
+    <!-- bootstrap的使用 -->
+    <script src="../JS/jquery-3.2.1.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        .listItem {
+            width: 100%;
+            cursor: pointer;
+        }
+        .ltt-panel-body-one-p{
+            font-size: 14px;
+            line-height: 200%;
+            color: #5e5e5e;
+        }
+        .panel-body p{
+            margin-bottom: 20px;
+        }
+        .ltt-hd2{
+            height: 60px;
+            padding: 0 20px;
+            border-bottom: solid 1px #EDEDED;
+            margin-bottom: 20px;
+        }
+        .ltt-hd2 a{
+            height: 30px;
+            line-height: 30px;
+            font-family: "Microsoft YaHei", "微软雅黑";
+            font-weight: bold;
+            display: block;
+            padding: 0 10px;
+            font-size: 14px;
+/*            color: #828282;
+            text-decoration: none;*/
+        }
+       .cur{
+            color: #FFF;
+            background-color: #888;
+            border-radius: 5px;
+            height: 30px;
+            line-height: 30px;
+            font-family: "Microsoft YaHei", "微软雅黑";
+            display: block;
+            font-weight: bold;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+    .ltt-hd2 li {
+            float: left;
+            height: 30px;
+            padding: 15px 0;
+            margin-right: 10px;
+        }
+        .disContent{
+            padding: 0 20px 30px;
+            font-size: 14px;
+            line-height: 200%;
+            color: #5e5e5e;
+            font-family: "Microsoft YaHei", "微软雅黑";
+        }
+
+        .block_faq{ background-color: #979797;
+        margin: 20px 20px 0;
+        border-radius: 5px;
+        padding: 0 50px 50px;
+        }
+        .title{
+            text-align: center;
+            color: #FFF;
+            font-size: 12px;
+            font-family: simsun, "宋体";
+            line-height: 50px;
+        }
+        .clearfix dt{
+            color: #FFF;
+        }
+        .clearfix dd{
+            color: #c6c6c6;
+            line-height: 150%;
+            font-family: Arial, simsun, "宋体";
+            font-size:10px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="lt">
+        <a href="firsrPage.html"><img src="../img/logo/logo1.png" alt=""></a>
+    </div>
+    <ul class="mid">
+        <li>
+            <a href="lipstick.html">口红</a>
+        </li>
+        <li>
+            <a href="bbCream.html">BB霜</a>
+        </li>
+        <li>
+            <a href="eyeShadow.html">眼影</a>
+        </li>
+        <li>
+            <a href="blusher.html">腮红</a>
+        </li>
+    </ul>
+    <div class="rt">
+        <div class="rtItem">
+            <a href="login.html">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+            <div id="subUser">
+                <span class="triangle"></span>
+                <dl class="userFace">
+                    <dd>
+                        <img src="https://account.smartisan.com/files/00/3a/1f/55/avatar.png">
+                    </dd>
+                    <dt>破刃之剑101</dt>
+                </dl>
+
+                <ul>
+                    <li class="order">
+
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-th-list"></span>我的订单</a>
+                    </li>
+                    <li class="support">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-list-alt"></span>售后服务</a>
+                    </li>
+                    <li class="coupon">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-tags"></span>我的优惠</a>
+                    </li>
+                    <li class="information">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-tasks"></span>账户资料</a>
+                    </li>
+                    <li class="address">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-send"></span>收货地址</a>
+                    </li>
+                    <li class="logout">
+                        <a href="#"><span class="glyphicon glyphicon-remove-circle"></span>退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rtItem">
+            <a href="shopingCar.html">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+            </a>
+            <div id="subShopping">
+                <!-- 这里直接跳转吧  工作量太大了 -->
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- 正文开始,使用bootstrap吧 -->
+<div class="container" style="width: 1170px;!important;">
+   <!-- <div class="row" >-->
+        <div class="col-xs-2">
+            <ul class="text-center nav nav-tabs list-group">
+                <img class="img-responsive" src="../img/avatar.png" alt="">
+                <li data-toggle="tab" data-target="#order" class="listItem list-group-item list-group-item-danger">关于订购</li>
+                <li class="listItem list-group-item" data-toggle="tab" data-target="#serve">关于支付</li>
+                <li class="listItem list-group-item" data-toggle="tab" data-target="#discounts">关于发货</li>
+                <li class="listItem list-group-item" data-toggle="tab" data-target="#count">退换货</li>
+                <li class="listItem list-group-item" data-toggle="tab" data-target="#address">获得优惠</li>
+                <li class="listItem list-group-item" data-toggle="tab" data-target="#oldTonew">我的账户</li>
+            </ul>
+        </div>
+        <div class="col-xs-10">
+            <div class="tab-content">
+                <div class="tab-pane active" id="order">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">关于订购</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="ltt-hd2">
+                                <ul>
+                                    <li><a href="#" class="cur">网上订购</a></li>
+                                    <li><a href="#">电话订购</a></li>
+                                    <li><a href="#">短信订购</a></li>
+                                    <li><a href="#">QQ/MSN短信</a></li>
+                                </ul>
+                            </div>
+                            <div class="disContent clearfix">
+                                <p><strong>STEP 1 选购商品</strong></p><p> &nbsp;可以按照产品分类、品牌或者是功效进行选择；　</p><p><strong>STEP 2 修改购物信息</strong></p><p> &nbsp;购物车中可以修改你所需要的产品数量，也可以删除选错的产品、里边也有我们为您精心准备的礼品供您选择哦；</p><p><strong>STEP 3 登陆安全区</strong></p><p> &nbsp;已注册用户直接登陆即可，新用户可以在3秒钟内快速注册，成为会员，提高交易安全；</p><p><strong>STEP 4 填写收货地址、选择送货方式</strong></p><p> &nbsp;根据你的所在地，选择你希望的送货方式，详细认真填写你的收货地址;</p><p><strong><strong>STEP</strong> 5 提交订单</strong><br></p><p> &nbsp;确认以上信息无误后，确认提交订单；</p><p><strong>STEP 6 确认支付</strong><br></p><p> &nbsp;可采用支付宝或者网银直接在线支付，如果采用银行汇款等方式支付的客户，请在汇款后电话通知我们；</p><p><strong>STEP 7 发货</strong></p><p> &nbsp;支付成功后，你的订单生效，我们将尽快给您安排发货；（每天16：00之前支付成功的订单当天发货）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="serve">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">关于支付</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="ltt-hd2">
+                                <ul>
+                                    <li><a href="#" class="cur">货到付款</a></li>
+                                    <li><a href="#">邮局汇款</a></li>
+                                    <li><a href="#">银行卡在线支付</a></li>
+                                    <li><a href="#">银行汇款</a></li>
+                                </ul>
+                            </div>
+                            <div class="disContent clearfix">
+                                <table border="0" cellspacing="1" cellpadding="5" width="98%" bgcolor="#cccccc" align="center"><tbody><tr><td style="font-size:16px;font-weight:bold" bgcolor="#ffffff" height="50" colspan="7" align="center">Dreamtimes全国货到付款（顺丰）<span style="color:#ff6600;">配送区域</span>及<span style="color:#ff6600;">费用</span>表</td></tr><tr><td bgcolor="#f3f3f3" rowspan="2" width="6%" align="center"><strong>编号</strong></td><td bgcolor="#f3f3f3" rowspan="2" width="10%" align="center"><strong>单票重量</strong></td><td bgcolor="#f3f3f3" rowspan="2" align="center"><strong>单件体积限定</strong></td><td bgcolor="#f3f3f3" colspan="2" align="center"><strong>江浙区</strong></td><td bgcolor="#f3f3f3" rowspan="2" width="18%" align="center"><strong>直达城市（2-3天）</strong></td><td bgcolor="#f3f3f3" rowspan="2" width="18%" align="center"><strong>中转城市（3-6天）</strong></td></tr><tr><td bgcolor="#f3f3f3" align="center"><strong>1区(1天)</strong></td><td bgcolor="#f3f3f3" align="center"><strong>2区(2天)</strong></td></tr><tr><td bgcolor="#ffffff" align="center">XS</td><td bgcolor="#ffffff" align="center">1KG</td><td bgcolor="#ffffff" rowspan="5" align="center">长、宽、高之和小于100CM</td><td bgcolor="#ffffff" align="center">15</td><td bgcolor="#ffffff" align="center">15</td><td bgcolor="#ffffff" align="center">20</td><td bgcolor="#ffffff" align="center">30</td></tr><tr><td bgcolor="#ffffff" align="center">S</td><td bgcolor="#ffffff" align="center">2KG</td><td bgcolor="#ffffff" align="center">18</td><td bgcolor="#ffffff" align="center">20</td><td bgcolor="#ffffff" align="center">20</td><td bgcolor="#ffffff" align="center">40</td></tr><tr><td bgcolor="#ffffff" align="center">M</td><td bgcolor="#ffffff" align="center">3KG</td><td bgcolor="#ffffff" align="center">22</td><td bgcolor="#ffffff" align="center">25</td><td bgcolor="#ffffff" align="center">30</td><td bgcolor="#ffffff" align="center">50</td></tr><tr><td bgcolor="#ffffff" align="center">L</td><td bgcolor="#ffffff" align="center">4KG</td><td bgcolor="#ffffff" align="center">25</td><td bgcolor="#ffffff" align="center">30</td><td bgcolor="#ffffff" align="center">40</td><td bgcolor="#ffffff" align="center">60</td></tr><tr><td bgcolor="#ffffff" align="center">XL</td><td bgcolor="#ffffff" align="center">5KG</td><td bgcolor="#ffffff" align="center">30</td><td bgcolor="#ffffff" align="center">40</td><td bgcolor="#ffffff" align="center">50</td><td bgcolor="#ffffff" align="center">70</td></tr><tr><td bgcolor="#ffffff" rowspan="5" align="center"><strong>到达城市范围</strong></td><td bgcolor="#ffffff" height="30" colspan="6"></td></tr><tr><td bgcolor="#ffffff" rowspan="6" align="center"><strong>备注</strong></td><td style="line-height:22px" bgcolor="#ffffff" colspan="6">顺丰能到的地方都可以货到付款。详情请查看顺丰官网收送范围<span style="line-height:21.99652862548828px;background-color:#ffffff;">查询：</span><a href="http://www.sf-express.com/cn/sc/dynamic_functions/range/">http://www.sf-express.com/cn/sc/dynamic_functions/range/</a></td></tr></tbody></table><p><br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="discounts">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">关于发货</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="ltt-hd2">
+                                <ul>
+                                    <li><a href="/#" class="cur">快递送货范围及费用</a></li>
+                                    <li><a href="/#">EMS送货范围及费用</a></li>
+                                    <li><a href="/#">如何免运费</a></li>
+                                    <li><a href="/#">客户验收产品</a></li>
+                                </ul>
+                            </div>
+                            <div class="disContent clearfix">
+                                <p><span style="letter-spacing:0px;font-family:arial, helvetica, sans-serif;font-size:16px;"> Dreamtimes为您提供359个城市的送货上门服务。江浙沪皖地区，首重1公斤内6元/单， 超重2元/公斤；江浙沪皖外省市首重1公斤内12元/单，超重10元/公斤； </span></p><p><span style="font-family:arial, helvetica, sans-serif;letter-spacing:0px;"> &nbsp;1.普通件一律发顺丰，顺丰不到的件到目的地后由顺丰转发其他快递！</span><br></p><p><span style="letter-spacing:0px;font-family:arial, helvetica, sans-serif;"> &nbsp;2.货到付款的件全部发顺丰，顺丰不到的请选择在线支付后由顺丰转发其他快递</span><span style="letter-spacing:0px;font-family:arial, helvetica, sans-serif;">！</span></p><p><span style="font-family:宋体;letter-spacing:0;font-size:15px"><span style="letter-spacing:0px;font-family:arial, helvetica, sans-serif;font-size:16px;"> &nbsp;3.配送时间：发货后江浙沪皖</span><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">1-2</span><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">天，一线城市</span><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">2-3</span><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">天，二线城市</span><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">3-5</span><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">天，偏远地区转发其 &nbsp; 他快递延迟</span><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">2-3</span><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">天。</span></span></p><p><span style="font-family:arial, helvetica, sans-serif;letter-spacing:0px;"> 注：法定假及周六日休息时间往后延迟假期天数。</span><br></p><p><span style="letter-spacing:0px;font-family:arial, helvetica, sans-serif;"> 具体配送范围请查看顺丰官网</span><span style="font-size:16px;letter-spacing:0px;font-family:arial, helvetica, sans-serif;"><a href="http://www.sf-express.com/cn/sc/dynamic_functions/range/" style="font-size:15px;letter-spacing:0px;font-family:arial, helvetica, sans-serif;">http://www.sf-express.com/cn/sc/dynamic_functions/range/</a></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="count">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">退换货</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="ltt-hd2">
+                                <ul>
+                                    <li><a href="#">退换货</a></li>
+                                    <li> <a href="#" class="cur" type="button">退换货处理</a></li>
+                                </ul>
+                            </div>
+                            <div class="disContent clearfix">
+                                <p>如您需要退换货，请按照以下格式发邮件到： cus@dreamtimes.com.cn</p><p>订单编号：</p><p>姓名：</p><p>退换商品：</p><p>退换货理由：</p><p>订购日期：</p><p>我们会在收到您的邮件的7个工作日内内，给你回复，15个工作日内给您完成退换货！</p><p>或直接联系在线客服（企业QQ4006751770）转接售后处理，这样更迅速，便捷。</p>
+                            </div>
+                            <div class="block_faq">
+                                <p class="title">退换货处理&nbsp;注意事项</p>
+                                <dl class="clearfix">
+                                    <dt>Q: 因产品本身质量问题或者发错货品导致的产品调换，换货运费和细则处理</dt>
+                                    <dd>A: 具体细则是：
+
+                                        1.客户在保证产品外包装完好的情况下，把需要调换的产品和附上的字条（字条上写上订单号和更换事由及支付宝或工行账号，其他账号不接受)发回我司仓库.仓库接到退货后会根据您的留言需求重新派发给您。
+
+
+                                        2.产品退回的运费先由客户垫付，我们收到退货后，将客户垫付运费退回其提供的账户内。
+
+
+                                        3.因我方仓库发货失误导致的调换货，可免费调换一次。如客户要求再次调换，在外包装完好的情况下，运费自理可再次调换。
+
+
+                                        4.希望各位客户也尽可能配合我们仓库工作，对于我们承担的运费要求范围，是根据我们订单上运费标准来退，上限可浮动3元。超出部分客户自理。
+
+
+                                        5.退回产品不接受到付，EMS，顺风，及破损件。
+
+
+                                        6.对于产品质量问题及其他原因需要退换货的请在签收日期起7日内联系客服办理，超过日期不在给予办理。</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="address">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">获得优惠</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="ltt-hd2">
+                                <ul>
+                                    <li><a href="#" class="cur">购物礼品</a></li>
+                                    <li><a href="#">现金券</a></li>
+                                    <li><a href="#">VIP</a></li>
+                                    <li><a href="#">免运费政策</a></li>
+                                    <li><a href="#">积分</a></li>
+                                    <li><a href="#">充值送</a></li>
+                                </ul>
+                            </div>
+                            <div class="disContent clearfix">
+                                <p><strong><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">礼品赠送说明：</span></strong></p><p><span style="font-family:arial, helvetica, sans-serif;font-size:16px;"> &nbsp;我们会在节假日或者特别促销时期，对于单笔订单金额满200元，300元（vip客户满200元，普通客户满300元）的客户，准备了不同的礼品供您选择 </span></p><p><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">1、只有订单金额大于200元/300元（VIP客户大于200元，普通客户大于300元），才满足赠送礼品的条件；</span></p><p><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">2、单笔订单，只能选择一件礼品；</span></p><p><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">3、对于多色的礼品，如果您未在订单备注中指定颜色，则我们将随机赠送；</span></p><p><strong><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">注意：</span></strong></p><p><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">1、礼品优惠政策，只针对零售客户，其他类型客户无权享受；</span></p><p><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">2、礼品送完为止，且不可以退换；</span></p><p><span style="font-family:arial, helvetica, sans-serif;font-size:16px;">3、礼品赠送非长期促销策略，请以最新的首页促销活动广告说明为准.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="oldTonew">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">我的账户</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p><strong>订单状态说明:</strong></p>
+                            <p class="ltt-panel-body-one-p"> &nbsp;等待支付：您的订单已经提交成功，等待您支付！（支付成功后才可以发货哦）<br> &nbsp;订单取消：您的订单已经取消（可以通过点击恢复，恢复订单）；<br> &nbsp;支付成功，处理中：您的订单已经支付成功，我们正在给您安排处理发货；<br> &nbsp;已发货：您的订单已经发出；<br> &nbsp;申请退货：您的订单正在申请退货中；<br> &nbsp;已退货：您的订单退货成功；</p>
+                            <p> <strong>订单修改:</strong></p>
+                            <p> &nbsp;如果您在下单成功后，需要修改商品或者其他信息，请您取消订单，然后重新下单， &nbsp;（如果已经支付成功，请联系客服帮你操作）</p>
+                            <p><strong>注明：<br></strong></p>
+                            <p> &nbsp;已发货的订单，您就无法修改咯;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+ <!--   </div>-->
+</div>
+
+
+<footer class="jkj-footer">
+    <div class="footerTop">
+        <div class="footerService">
+            <div class="service1">
+                <a href="offline.html" target="_self">
+                    <h3>线下体验</h3>   <!-- 斜体显示 -->
+                    <p>
+                        <span>2300 +</span>
+                        <span>全国门店邀您体验</span>
+                    </p>
+                </a>
+            </div>
+
+            <div class="service2">
+                <a href="myOrderList.html" target="_self">
+                    <h3>服务支持</h3>
+                    <p>
+                        <span>获取更多支持</span>
+                        <span>售前咨询，售后保障</span>
+                    </p>
+                </a>
+            </div>
+
+            <div class="service3">
+                <a href="firsrPage.html" target="_blank">
+                    <h3>在线选购</h3>
+                    <p>
+                        <span>15天换货保障</span>
+                        <span>7天无理由退换货</span>
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="onliveServer">
+            <span>24小时全国服务热线</span>
+            <p class="tel">184-3520-7089</p>
+            <div>
+                <a class="onliveBtn" href="javascript:void 0;" style="line-height: 40px">
+                    <span class="glyphicon glyphicon-comment" style="line-height: 40px"></span>
+                    <span> 在线客服</span>
+                </a>
+                <img id="erwei" src="../img/firsrPage/footer/erwei.png" alt="在这里">
+            </div>
+
+        </div>
+    </div>
+
+
+    <hr class="hr"/>
+    <div class="footBottom">
+        <ul class="aboutUs">
+            <li>
+                <a href="aboutUs.html">联系我们</a> <span></span>
+            </li>
+        </ul>
+
+        <div class="last">
+            ©2017 Meizu Telecom Equipment Co., Ltd. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+            <a target="_blank" href="#">粤ICP备13003602号</a>
+            <a target="_blank" href="#">合字B2-20170010 </a>
+            <a target="_blank" href="#">营业执照</a>
+            <a target="_blank" href="#">法律声明</a>
+            <a target="_blank" href="">
+                粤公网安备 44049102496009 号
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

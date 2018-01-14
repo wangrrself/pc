@@ -1,0 +1,149 @@
+.ltt-li{
+    padding-bottom: 20px;
+}
+
+
+.ltt-first-bg{
+    min-width: 1335px;
+    height:500px;
+    background-repeat: no-repeat;
+    position:relative;
+    background-image: url("../img/lipstick/li/true.jpg");
+    background-size: cover;
+}
+.ltt-lag{
+    font-size:40px;
+    color:white;
+    /* font-size:"scnr_grotesklight";*/
+    font-weight:bold;
+}
+
+.ltt-content-p,.ltt-content-main,.ltt-list-title{
+    font-family:"幼圆";
+}
+.ltt-content-body{
+    width:400px;
+    height:300px;
+    position: relative;
+    margin-left: 35%;
+    margin-top: 6%;
+    padding: 5%;
+    color: #ffffff;
+}
+.ltt-content-main{
+    font-size:30px;
+}
+
+.ltt-content-p{
+    width:400px;
+    line-height:2em;
+    font-size:15px;
+    margin-top: 10%;
+}
+/*	内容部分*/
+.ltt-list-div{
+    min-width:1329px;
+    /*height:2049px;*/
+    height:100%;
+    background-color: #F3F3F3;
+    position: relative;
+    margin-top: 50px;
+}
+.ltt-list-title{
+    display: inline-block;
+    margin-left:15%;
+    font-size:40px;
+}
+/*		产品列表*/
+.ltt-list-ul{
+    width:1355px;
+    list-style: none;
+    margin:0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.ltt-list-ul li{
+    float:left;
+    width:200px;
+    height:300px;
+    margin-left:50px;
+    margin-top: 20px;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+    border-radius:10px;
+}
+.ltt-li-img-div{
+    width:200px;
+    height: 180px;
+    overflow: hidden;
+}
+.ltt-li-img{
+    width:60%;
+    overflow: hidden;
+}
+.ltt-li-img:hover{
+    transition:2s;
+    transform:scale(1.2);
+/*    behavior: url(../css/ie-css3.htc);
+    behavior: url(../JS/PIE.htc);*/
+}
+.ltt-li-div{
+    width:310px;
+    height:200px;
+    /* border:1px blue solid;*/
+    margin-top: 10px;
+    margin-left: -50px;
+    text-align: center;
+}
+.ltt-li-p1{
+    font-family:"幼圆";
+    font-size:15px;
+    color: #424242;
+}
+.ltt-li-p2{
+    font-family:"幼圆";
+    font-size:12px;
+    color:#BEBEBE;
+    margin-top: 10px;
+}
+.ltt-li-p3{
+    margin-top: 15px;
+    color: red;
+    font-size:18px;
+    font-weight:bold;
+}
+.ltt-li-a{
+    display: block;
+    float: left;
+    width:70px;
+    height:25px;
+    font-size:10px;
+    background-color: white;
+    border-radius:10px;
+    font-family:"幼圆";
+    text-decoration: none;
+    line-height:25px;
+    color:#646464;
+    margin-left: 65px;
+    border:1px #F0F0F0 solid;
+    position:relative;
+    z-index:2;
+    behavior: url(../css/ie-css3.htc);
+    behavior: url(../JS/PIE.htc);
+}
+.a1:hover{
+    background-color: #F0F0F0;
+
+}
+.a2{
+    background-color: #5172C6;
+    color: white;
+    margin-left: 30px;
+}
+.a2:hover{
+    background-color: #5179DF;
+    color: white;
+    margin-left: 30px;
+
+}

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>firstPage</title>
+    <meta charset="UTF-8">
+    <!--[if IE]>
+    <script src="../JS/html5shiv.min.js"></script>
+    <script src="../JS/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/header&footer.css">
+    <link rel="stylesheet" href="../css/firstPage.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <script src="../JS/jquery-1.6.4.min.js"></script>
+    <script src="../JS/selectivizr.js"></script>
+    <script src="../JS/jquery.roundabout.js"></script>
+    <!-- 视频插件,兼容flash -->
+   <!-- <link href=”http://vjs.zencdn.net/c/video-js.css” rel=”stylesheet”>
+    <script src=”http://vjs.zencdn.net/c/video.js”></script>-->
+    <script src="../JS/video-js/video.js"></script>
+    <link rel="stylesheet" href="../JS/video-js/video-js.min.css">
+    <!-- If you'd like to support IE8 -->
+    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+    <script>
+        videojs.options.flash.swf = "video-js.swf";
+    </script>
+</head>
+<body>
+<div class="jkj-gotoTop" id="jkj-goTop">
+    <a href="#" class="glyphicon glyphicon-eject"></a>
+</div>
+<nav>
+    <div class="lt">
+        <a href="firsrPage.html"><img src="../img/logo/logo1.png" alt=""></a>
+    </div>
+    <ul class="mid">
+        <li>
+            <a href="lipstick.html">口红</a>
+        </li>
+        <li>
+            <a href="bbCream.html">BB霜</a>
+        </li>
+        <li>
+            <a href="eyeShadow.html">眼影</a>
+        </li>
+        <li>
+            <a href="blusher.html">腮红</a>
+        </li>
+    </ul>
+    <div class="rt">
+        <div class="rtItem">
+            <a href="login.html">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+            <div id="subUser">
+                <span class="triangle"></span>
+                <dl class="userFace">
+                    <dd>
+                        <img src="https://account.smartisan.com/files/00/3a/1f/55/avatar.png">
+                    </dd>
+                    <dt>破刃之剑101</dt>
+                </dl>
+
+                <ul>
+                    <li class="order">
+
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-th-list"></span>我的订单</a>
+                    </li>
+                    <li class="support">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-list-alt"></span>售后服务</a>
+                    </li>
+                    <li class="coupon">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-tags"></span>我的优惠</a>
+                    </li>
+                    <li class="information">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-tasks"></span>账户资料</a>
+                    </li>
+                    <li class="address">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-send"></span>收货地址</a>
+                    </li>
+                    <li class="logout">
+                        <a href="#"><span class="glyphicon glyphicon-remove-circle"></span>退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rtItem">
+            <a href="shopingCar.html">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+            </a>
+            <div id="subShopping">
+                <!-- 这里直接跳转吧  工作量太大了 -->
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="jkj-subMenu">
+    <div id="jkj-topNav">
+        <a href="#jkj-s1">lipstick精选</a>
+        <a href="#jkj-s2">eyeShadow</a>
+        <a href="#jkj-s3">blusher</a>
+        <a href="#jkj-s4">bb cream</a>
+        <a class="shopItem hide" href=""><span class="glyphicon glyphicon-shopping-cart"></span></a>
+    </div>
+</div>
+<header class="jkj-header">
+    <section class="jkj-header">
+        <div class="jkj-box">
+            <div class="jkj-content">
+                <div class="img1">
+                    <div class="pic">
+                        <img src="../img/firsrPage/s1/img1-1.png" alt="">
+                        <img src="../img/firsrPage/s1/img1-2.png" alt="">
+                    </div>
+                    <div class="extrude">
+                        生命的化妆 我欠你一份嫁妆!!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+<article>
+    <section id="jkj-s1" class="jkj-shop">
+        <div class="lipstickTop shopTop">
+            <div>lipstick</div>
+            <div><a href="lipstick.html">显示更多 <span> &gt;&gt;&gt;&gt;</span></a></div>
+        </div>
+        <div class="shopMain1">
+            <a href="javascript:void 0">
+                <video id="myvideo" autoplay class="video-js vjs-default-skin" controls preload="none" width="100%"
+                       height="99%" data-setup="{}"
+                       poster="">
+                    <!--data-setup="{}"  这一句非常重要,
+                    data-setup：页面准备完成即自动加载
+                    但是不知道什么意思-->
+                    <source src="../img/firsrPage/lipstick/lip.mp4">
+                    你的浏览器不行了,赶紧换吧
+                </video>
+            </a>
+            <a href="javascript:;" class="openpage"
+				data-name="香艳口红1号"
+				data-info="香艳口红1号自出生就接受众多女性的支持,已然已成为时尚的引领者"
+				data-price="99"
+				data-src="../img/firsrPage/lipstick/lipstick1.png"
+			></a>
+            <a href="javascript:;" class="openpage"
+				data-name="香艳口红2号"
+				data-info="香艳口红2号自香艳口红1号出生就接受众多女性的支持,于是在众多女性的呼吁下我们又推出更让女性欢迎的2号,你的魅力不止于此"
+				data-price="199"
+				data-src="../img/firsrPage/lipstick/lipstick2.png"
+			></a>
+        </div>
+    </section>
+    <section id="jkj-s2" class="jkj-shop">
+        <div class="lipstickTop shopTop">
+            <div>eyeShadow</div>
+            <div><a href="eyeShadow.html">显示更多 <span> &gt;&gt;&gt;&gt;</span></a></div>
+        </div>
+        <div class="shopMain2">
+            <a href="javascript:;" class="openpage"
+				data-name="MAC"
+				data-info="你说看到的眼影MAC就像MAC BOOK一样轻薄,迷人,让你一眼入胜,使用者连连称绝,你指的拥有"
+				data-price="129"
+				data-src="../img/firsrPage/eyeShadow/eye1.jpg"
+			></a>
+            <a href="javascript:;" class="openpage"
+				data-name="Sleek"
+				data-info="天然植物彩妆，让你做最自然的自己。"
+				data-price="149"
+				data-src="../img/firsrPage/eyeShadow/eye2.jpg"></a>
+            <a href="javascript:;" class="openpage"
+				data-name="PINK "
+				data-info="在都市里轻松获得来自大自然的美丽。"
+				data-price="169"
+				data-src="../img/firsrPage/eyeShadow/eye3.jpg"></a>
+            <a href="javascript:;" class="openpage"
+				data-name="MAX FACTOR"
+				data-info="炫出自我，扮靓人生，这个夏天你才是焦点。"
+				data-price="199"
+				data-src="../img/firsrPage/eyeShadow/eye4.jpg"></a>
+        </div>
+    </section>
+    <section id="jkj-s3" class="jkj-shop">
+        <div class="lipstickTop shopTop">
+            <div>blusher</div>
+            <div><a href="blusher.html">显示更多 <span> &gt;&gt;&gt;&gt;</span></a></div>
+        </div>
+        <div class="shopMain3">
+            <a href="javascript:;" class="openpage"
+				data-name="孔凤春"
+				data-info="炫出自我，扮靓人生，这个夏天你才是焦点。"
+				data-price="166"
+				data-src="../img/firsrPage/blusher/saihong1.jpg"></a>
+            <a href="javascript:;" class="openpage"
+				data-name="浅粉"
+				data-info="彩妆有柔色，柔色有佳人。"
+				data-price="109"
+				data-src="../img/firsrPage/blusher/saihong3.jpg"></a>
+            <a class="jkj-lunbo" href="javascript:void 0">
+
+                <section class="jkj-lunbo">
+                    <div class="lunboBox">
+                        <div class="content">
+                            <img src="../img/firsrPage/blusher/lunbo/lun1.jpg" alt="">
+                            <img src="../img/firsrPage/blusher/lunbo/lun2.jpg" alt="">
+                            <img src="../img/firsrPage/blusher/lunbo/lun3.jpg" alt="">
+                            <img src="../img/firsrPage/blusher/lunbo/lun4.jpg" alt="">
+                        </div>
+                        <div class="points">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </section>
+
+            </a>
+        </div>
+    </section>
+    <section id="jkj-s4" class="jkj-shop">
+        <div class="lipstickTop shopTop">
+            <div>bb cream</div>
+            <div><a href="bbCream.html">显示更多 <span> &gt;&gt;&gt;&gt;</span></a></div>
+        </div>
+        <div class="shopMain4">
+            <a href="javascript:;" class="openpage"
+				data-name="美宝莲"
+				data-info="持续美妆，不化妆，不补妆，就是美宝莲BB霜！"
+				data-price="99"
+				data-src="../img/firsrPage/bbCream/b1.jpg"></a>
+            <a href="javascript:;" class="openpage"
+				data-name="象牙白 BB霜"
+				data-info="美眉全天不掉妆，象牙白驻颜第一霜。"
+				data-price="129"
+				data-src="../img/firsrPage/bbCream/b2.jpg"></a>
+			<a href="javascript:;" class="openpage"
+				data-name="MISSHA"
+				data-info="从清晨到傍晚，我们始终一个姿态陪伴你。"
+				data-price="199"
+				data-src="../img/firsrPage/bbCream/b3.jpg"></a>
+            <a href="javascript:void 0;">
+                <div class="jkj-rotateBox">
+                    <div class="content">
+                        <div>
+                            <p>女人是坠落凡间的天使，折断了翅膀，让我在四月天遇见百分百女孩。</p>
+                            <img src="../img/firsrPage/bbCream/erwei/erwei.png" alt="">
+                        </div>
+                        <div>
+                            <p> 优雅的人永远活得精彩，可以触摸到生活的质感，领略到人性的高贵</p>
+                            <img src="../img/firsrPage/bbCream/erwei/erwei.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="jkj-round">
+        <ul id="myRoundabout">
+            <li><img src="../img/firsrPage/wheel/pic%20(1).jpg" alt=""></li>
+            <li><img src="../img/firsrPage/wheel/pic%20(2).jpg" alt=""></li>
+            <li><img src="../img/firsrPage/wheel/pic%20(3).jpg" alt=""></li>
+            <li><img src="../img/firsrPage/wheel/pic%20(4).jpg" alt=""></li>
+            <li><img src="../img/firsrPage/wheel/pic%20(5).jpg" alt=""></li>
+            <li><img src="../img/firsrPage/wheel/pic%20(6).jpg" alt=""></li>
+            <li><img src="../img/firsrPage/wheel/pic%20(7).jpg" alt=""></li>
+        </ul>
+        <!-- 按钮不用显示了--太丑 -->
+        <!--<div>
+            <span class="ban_l_btn">左侧asdasdas</span>
+            <span class="ban_r_btn">右侧asdasdasd</span>
+        </div>-->
+    </section>
+</article>
+<footer class="jkj-footer">
+    <div class="footerTop">
+        <div class="footerService">
+            <div class="service1">
+                <a href="offline.html" target="_self">
+                    <h3>线下体验</h3>   <!-- 斜体显示 -->
+                    <p>
+                        <span>2300 +</span>
+                        <span>全国门店邀您体验</span>
+                    </p>
+                </a>
+            </div>
+
+            <div class="service2">
+                <a href="myOrderList.html" target="_self">
+                    <h3>服务支持</h3>
+                    <p>
+                        <span>获取更多支持</span>
+                        <span>售前咨询，售后保障</span>
+                    </p>
+                </a>
+            </div>
+
+            <div class="service3">
+                <a href="firsrPage.html" target="_blank">
+                    <h3>在线选购</h3>
+                    <p>
+                        <span>15天换货保障</span>
+                        <span>7天无理由退换货</span>
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="onliveServer">
+            <span>24小时全国服务热线</span>
+            <p class="tel">184-3520-7089</p>
+            <div>
+                <a class="onliveBtn" href="javascript:void 0;" style="line-height: 40px">
+                    <span class="glyphicon glyphicon-comment" style="line-height: 40px"></span>
+                    <span> 在线客服</span>
+                </a>
+                <img id="erwei" src="../img/firsrPage/footer/erwei.png" alt="在这里">
+            </div>
+
+        </div>
+    </div>
+
+
+    <hr class="hr"/>
+    <div class="footBottom">
+        <ul class="aboutUs">
+            <li>
+                <a href="aboutUs.html">联系我们</a> <span></span>
+            </li>
+        </ul>
+
+        <div class="last">
+            ©2017 Meizu Telecom Equipment Co., Ltd. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+            <a target="_blank" href="#">粤ICP备13003602号</a>
+            <a target="_blank" href="#">合字B2-20170010 </a>
+            <a target="_blank" href="#">营业执照</a>
+            <a target="_blank" href="#">法律声明</a>
+            <a target="_blank" href="">
+                粤公网安备 44049102496009 号
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="../JS/firstPage.js"></script>
+<script>
+    $('ul#myRoundabout').roundabout({
+        duration: 600, // 运动速度
+        btnPrev: ".ban_r_btn", // 右按钮
+        btnNext: ".ban_l_btn", // 左按钮
+        autoplay: true,        // 自动播放
+        autoplayDuration: 1500,// 自动播放的时间
+        minOpacity: 0,         //最小的透明度
+        maxOpacity: 1,         //最大的透明度
+        reflect: true,         // 为true时是从左向右移动，为false从右向左移动
+        startingChild: 3,      // 默认的显示第几张图片
+        autoplayInitialDelay: 5000, // 从第几秒时，开始自动播放（默认毫秒）开始的第一次管用
+        autoplayPauseOnHover: true, // 鼠标移入元素内是否自动播放，为true不播放，false还自动播放
+        enableDrag: true       // 在移动端可以拖拽播放
+    });
+
+	$(".rt .glyphicon-user").click(function(){
+		var a = getCookie("username");
+		if(a){
+			alert("尊敬的"+a+"用户,您已经登录..");
+		}else{
+			window.location.href = "login.html";
+		}
+	})
+	
+	//获取cookie
+	function getCookie(name) {
+		 var nameEQ = name + "=";
+		 var ca = document.cookie.split(';'); //把cookie分割成组
+		 for(var i=0;i < ca.length;i++) {
+			 var c = ca[i]; //取得字符串
+			 while (c.charAt(0)==' ') { //判断一下字符串有没有前导空格
+				c = c.substring(1,c.length); //有的话，从第二位开始取
+			 }
+			 if (c.indexOf(nameEQ) == 0) { //如果含有我们要的name
+				return unescape(c.substring(nameEQ.length,c.length)); //解码并截取我们要值
+			 }
+		 }
+		 return false;
+	}
+	
+	$(".openpage").click(function(){
+		var data_name = $(this).attr("data-name");
+		var data_info = $(this).attr("data-info");
+		var data_price = $(this).attr("data-price");
+		var data_src = $(this).attr("data-src");
+
+		setCookie("data_name",data_name);
+		setCookie("data_info",data_info);
+		setCookie("data_price",data_price);
+		setCookie("data_src",data_src);
+		window.location.href = "detail.html";
+	});
+	//设置cookie
+	function setCookie(name, value, seconds) {
+		 seconds = seconds || 0; //seconds有值就直接赋值，没有为0，这个根php不一样。
+		 var expires = "";
+		 if (seconds != 0 ) { //设置cookie生存时间
+		 var date = new Date();
+		 date.setTime(date.getTime()+(seconds*1000));
+		 expires = "; expires="+date.toGMTString();
+		 }
+		 document.cookie = name+"="+escape(value)+expires+"; path=/"; //转码并赋值
+	}
+</script>
+</html>

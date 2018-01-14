@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+    <title>我的订单</title>
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/header&footer.css">
+    <link rel="stylesheet" href="../css/offline.css">
+
+    <!-- bootstrap的使用 -->
+    <script src="../JS/jquery-1.11.3.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+
+    <!-- 百度地图的接口 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4&ak= 7lkdG2RCsqBQ9EdL7UcSfGGKpwFTyTKt "></script>
+
+
+    <script src="../JS/address.js"></script>
+</head>
+<body>
+<nav>
+    <div class="lt">
+        <a href="firsrPage.html"><img src="../img/logo/logo1.png" alt=""></a>
+    </div>
+    <ul class="mid">
+        <li>
+            <a href="lipstick.html">口红</a>
+        </li>
+        <li>
+            <a href="bbCream.html">BB霜</a>
+        </li>
+        <li>
+            <a href="eyeShadow.html">眼影</a>
+        </li>
+        <li>
+            <a href="blusher.html">腮红</a>
+        </li>
+    </ul>
+    <div class="rt">
+        <div class="rtItem">
+            <a href="login.html">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+            <div id="subUser">
+                <span class="triangle"></span>
+                <dl class="userFace">
+                    <dd>
+                        <img src="https://account.smartisan.com/files/00/3a/1f/55/avatar.png">
+                    </dd>
+                    <dt>破刃之剑101</dt>
+                </dl>
+
+                <ul>
+                    <li class="order">
+
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-th-list"></span>我的订单</a>
+                    </li>
+                    <li class="support">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-list-alt"></span>售后服务</a>
+                    </li>
+                    <li class="coupon">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-tags"></span>我的优惠</a>
+                    </li>
+                    <li class="information">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-tasks"></span>账户资料</a>
+                    </li>
+                    <li class="address">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-send"></span>收货地址</a>
+                    </li>
+                    <li class="logout">
+                        <a href="#"><span class="glyphicon glyphicon-remove-circle"></span>退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rtItem">
+            <a href="shopingCar.html">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+            </a>
+            <div id="subShopping">
+                <!-- 这里直接跳转吧  工作量太大了 -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<article>
+    <!-- 这是轮播图的一部分 -->
+    <section class="lunbo">
+        <div id="myCarouse" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarouse" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarouse" data-slide-to="1"></li>
+                <li data-target="#myCarouse" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="../img/offline/lun1.jpg" alt="...">
+                    <div class="carousel-caption">
+                        asdasd
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/offline/lun2.jpg" alt="...">
+                    <div class="carousel-caption">
+                        asdas
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/offline/lun3.jpg" alt="...">
+                    <div class="carousel-caption">
+                        asdas
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarouse" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarouse" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <section class="container-fluid">
+        <div class="row">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#">专卖店</a></li>
+                <li><a href="#">优秀专卖店</a></li>
+                <li><a href="#">形象销售点</a></li>
+            </ul>
+        </div>
+        <div id="content">
+
+        </div>
+    </section>
+</article>
+
+
+
+<footer class="jkj-footer">
+    <div class="footerTop">
+        <div class="footerService">
+            <div class="service1">
+                <a href="offline.html" target="_self">
+                    <h3>线下体验</h3>   <!-- 斜体显示 -->
+                    <p>
+                        <span>2300 +</span>
+                        <span>全国门店邀您体验</span>
+                    </p>
+                </a>
+            </div>
+
+            <div class="service2">
+                <a href="myOrderList.html" target="_self">
+                    <h3>服务支持</h3>
+                    <p>
+                        <span>获取更多支持</span>
+                        <span>售前咨询，售后保障</span>
+                    </p>
+                </a>
+            </div>
+
+            <div class="service3">
+                <a href="firsrPage.html" target="_blank">
+                    <h3>在线选购</h3>
+                    <p>
+                        <span>15天换货保障</span>
+                        <span>7天无理由退换货</span>
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="onliveServer">
+            <span>24小时全国服务热线</span>
+            <p class="tel">184-3520-7089</p>
+            <div>
+                <a class="onliveBtn" href="javascript:void 0;" style="line-height: 40px">
+                    <span class="glyphicon glyphicon-comment" style="line-height: 40px"></span>
+                    <span> 在线客服</span>
+                </a>
+                <img id="erwei" src="../img/firsrPage/footer/erwei.png" alt="在这里">
+            </div>
+
+        </div>
+    </div>
+
+
+    <hr class="hr"/>
+    <div class="footBottom">
+        <ul class="aboutUs">
+            <li>
+                <a href="aboutUs.html">联系我们</a> <span></span>
+            </li>
+        </ul>
+
+        <div class="last">
+            ©2017 Meizu Telecom Equipment Co., Ltd. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+            <a target="_blank" href="#">粤ICP备13003602号</a>
+            <a target="_blank" href="#">合字B2-20170010 </a>
+            <a target="_blank" href="#">营业执照</a>
+            <a target="_blank" href="#">法律声明</a>
+            <a target="_blank" href="">
+                粤公网安备 44049102496009 号
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+<script>
+    //初始化--点击的样式
+    $("ul.nav-tabs li").removeClass("active");
+    $("ul.nav-tabs li").eq(0).addClass("active");
+
+    $("#content").load("./storeAddress/page"+0+".html",function(responseTxt,statusTxt,xhr){
+        if(statusTxt=="success")
+        //alert("外部内容加载成功！");
+            if(statusTxt=="error")
+                alert("Error: "+xhr.status+": "+xhr.statusText);
+    });
+
+
+    $("ul.nav-tabs li").click(function () {
+        console.log($(this).index());
+
+        $("ul.nav-tabs li").removeClass("active");
+        $(this).addClass("active");
+
+        $("#content").load("./storeAddress/page"+$(this).index()+".html",function(responseTxt,statusTxt,xhr){
+            if(statusTxt=="success")
+            //alert("外部内容加载成功！");
+                if(statusTxt=="error")
+                    alert("Error: "+xhr.status+": "+xhr.statusText);
+        });
+    })
+</script>
+</html>

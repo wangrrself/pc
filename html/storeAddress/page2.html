@@ -1,0 +1,151 @@
+<div class="row">
+    <div class="col-xs-3">
+        <div>
+            <select name="" id="province" style="overflow: scroll">
+                <option value="山西省" name="">山西省</option>
+            </select>
+            <select name="" id="city">
+                <option value="">请输入</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">搜索</button>
+      </span>
+            <input type="text" class="form-control" placeholder="Search for...">
+        </div>
+        <ul class="list-group scrollList" style="overflow-y: scroll;height: 508px">
+            <li class="list-group-item">
+                <h4>南郊区销售点</h4>
+                <p class="text-muted">
+                    <span>1</span>
+                    大同东信广场外围223号商铺 <br>
+                    15207811885
+                </p>
+            </li>
+            <li class="list-group-item">
+                <h4>南郊区销售点</h4>
+                <p class="text-muted">
+                    <span>1</span>
+                    大同东信广场外围223号商铺 <br>
+                    15207811885
+                </p>
+            </li>
+            <li class="list-group-item">
+                <h4>南郊区销售点</h4>
+                <p class="text-muted">
+                    <span>1</span>
+                    大同东信广场外围223号商铺 <br>
+                    15207811885
+                </p>
+            </li>
+            <li class="list-group-item">
+                <h4>南郊区销售点</h4>
+                <p class="text-muted">
+                    <span>1</span>
+                    大同东信广场外围223号商铺 <br>
+                    15207811885
+                </p>
+            </li>
+            <li class="list-group-item">
+                <h4>南郊区销售点</h4>
+                <p class="text-muted">
+                    <span>1</span>
+                    大同东信广场外围223号商铺 <br>
+                    15207811885
+                </p>
+            </li>
+            <li class="list-group-item">
+                <h4>南郊区销售点</h4>
+                <p class="text-muted">
+                    <span>1</span>
+                    大同东信广场外围223号商铺 <br>
+                    15207811885
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-9" id="allmap">
+
+    </div>
+</div>
+<div class="row ltt-container">
+    <div class="link-left">
+        <span>您的满意，我们的动力</span>
+        <a href="#">满意度调查</a>
+    </div>
+    <div class="link-right">
+        <span>加入我们，梦想从此开始</span>
+        <a href="#">加盟认证店</a>
+        <a class="join-link" href="#">加盟销售精英</a>
+    </div>
+</div>
+
+
+<style>
+    #province,
+    #city {
+        margin: 5px;
+        float: left;
+        width: 45%;
+        height: 38px;
+        line-height: 38px;
+    }
+
+    option {
+        /* select 的option是不可以自定义高度的,自己模拟这个控件吧*/
+    }
+
+    #allmap {
+        height: 591px;
+    }
+</style>
+<script type="text/javascript">
+    //写入二级联动的数据
+    //写入省
+    var provinceContent = "";
+    for (i = 0; i < provinceArr.length; i++) {
+        provinceContent += '<option value="' + provinceArr[i] + '" name="">' + provinceArr[i] + '</option>';
+    }
+    //写入市区
+    var str = "";
+    for (i = 1; i < cityArr[0].length; i++) {
+        str += '<option value="' + cityArr[0][i] + '">' + cityArr[0][i] + '</option>'
+    }
+    $("#city").html(str);
+
+
+    $("#province").html(provinceContent).change(function () {
+        var str = "";
+        for (i = 1; i < cityArr[provinceArr.indexOf(this.value)].length; i++) {
+            str += '<option value="' + cityArr[provinceArr.indexOf(this.value)][i] + '">' + cityArr[provinceArr.indexOf(this.value)][i] + '</option>'
+        }
+        $("#city").html(str);
+    });
+
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+
+
+    map.centerAndZoom("大同", 19);
+    //初始化  中心点  显示级别,是必要的
+    // 初始化地图,设置中心点坐标和地图级别
+    //center 设置中心点坐标 point类型 zoom参数必须设置  string类型,ZooM参数可有可无,不设置自动匹配最佳响应级别
+    //zoom范围3-19,高清地图或移动端3-18
+    //map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+    map.setCurrentCity("大同");          // 设置地图显示的城市 此项是必须设置的
+    //map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+    function theLocation() {
+        var city = document.getElementById("city").value;
+
+        if (city != "") {
+            map.centerAndZoom(city, 11);      // 用城市名设置地图中心点
+        }
+    }
+    $("#city").change(function () {
+        theLocation();
+    })
+
+</script>

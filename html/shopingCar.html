@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/header&footer.css">
+    <script src="../JS/jquery-1.11.3.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        a{
+            color: #333;
+        }
+        .active {
+            background-color: #DD4F43
+        }
+
+        .container {
+            margin-top: 60px;
+        }
+
+        body {
+            min-width: 1100px;
+        }
+
+        .myBtn {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            border: 1px solid #ccc;
+            line-height: 23px;
+        }
+
+        .myBtn:hover {
+            box-shadow: 2px 2px 8px #888888;
+            cursor: pointer;
+        }
+
+        .yMiddle {
+            position: relative;
+            top: 45px;
+        }
+
+        .account {
+            color: #F93D5C;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        .foot-btn {
+            position: relative;
+            top: 7px;
+        }
+
+        .notClick {
+            background: #EBEBE4;
+        }
+
+        .minFont {
+            font-size: 12px;
+        }
+
+        .selectBtn {
+            background-color: #F93D5C;
+        }
+
+        footer {
+            border-top: 1px solid #EEEEEE;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="lt">
+        <a href="firsrPage.html"><img src="../img/logo/logo1.png" alt=""></a>
+    </div>
+    <ul class="mid">
+        <li>
+            <a href="lipstick.html">口红</a>
+        </li>
+        <li>
+            <a href="bbCream.html">BB霜</a>
+        </li>
+        <li>
+            <a href="eyeShadow.html">眼影</a>
+        </li>
+        <li>
+            <a href="blusher.html">腮红</a>
+        </li>
+    </ul>
+    <div class="rt">
+        <div class="rtItem">
+            <a href="login.html">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+            <div id="subUser">
+                <span class="triangle"></span>
+                <dl class="userFace">
+                    <dd>
+                        <img src="https://account.smartisan.com/files/00/3a/1f/55/avatar.png">
+                    </dd>
+                    <dt>破刃之剑101</dt>
+                </dl>
+
+                <ul>
+                    <li class="order">
+
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-th-list"></span>我的订单</a>
+                    </li>
+                    <li class="support">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-list-alt"></span>售后服务</a>
+                    </li>
+                    <li class="coupon">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-tags"></span>我的优惠</a>
+                    </li>
+                    <li class="information">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-tasks"></span>账户资料</a>
+                    </li>
+                    <li class="address">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-send"></span>收货地址</a>
+                    </li>
+                    <li class="logout">
+                        <a href="#"><span class="glyphicon glyphicon-remove-circle"></span>退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rtItem">
+            <a href="shopingCar.html">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+            </a>
+            <div id="subShopping">
+                <!-- 这里直接跳转吧  工作量太大了 -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="container" id="app" style="min-width: 1100px;">
+    <div class="modal text-center fade" id="myModal" style="z-index: 10000;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    提示
+                </div>
+                <div class="modal-body">
+                    确定要删除吗???
+                </div>
+                <div class="modal-footer">
+                    <button @click="delOne()" data-dismiss="modal" type="button" class="btn btn-default">确认</button>
+                    <button data-dismiss="modal" type="button" class="btn btn-default">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default row">
+        <div class="panel-heading">
+            <h4 class="panel-title">购物清单</h4>
+        </div>
+        <div class="panel-body" style="padding: 0">
+            <div>
+                <table class="table table-hover table-responsive" style="margin-bottom: 0">
+                    <thead>
+                    <tr class="bg-danger">
+                        <th class="col-xs-4">商品名称</th>
+                        <th class="col-xs-2">单价</th>
+                        <th class="col-xs-2">数量</th>
+                        <th class="col-xs-2">金额</th>
+                        <th class="col-xs-2">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="col-xs-4 text-muted">
+                            <div class="row">
+                                <div class="col-xs-2 text-center">
+                                    <span class="yMiddle myBtn selItem"></span>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#" class="thumbnail" style="width: 80px;margin-bottom: 0">
+                                                <img class="media-object " src="../img/shopped/list-1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="media-body media-middle">
+                                            <span>烈焰斩男色</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-xs-2 unit-price" style="vertical-align: middle">
+                            66
+                        </td>
+                        <td class="col-xs-2 " style="vertical-align: middle">
+                            <span class="glyphicon glyphicon-minus myBtn"></span>
+                            <input class="text-center" value="1" type="text" disabled
+                                   style="width: 2em;outline: none;border: none ">
+                            <span class="glyphicon glyphicon-plus myBtn"></span>
+                        </td>
+                        <td class="col-xs-2 subtotal" style="vertical-align: middle">
+                            66
+                        </td>
+                        <td class="col-xs-2 text-center" style="vertical-align: middle">
+                            <div><a href="">移入收藏夹</a></div>
+                            <div><a class="" data-toggle="modal" data-target="#myModal" href="#">删除</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-xs-4 text-muted">
+                            <div class="row">
+                                <div class="col-xs-2 text-center">
+                                    <span class="yMiddle myBtn selItem"></span>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#" class="thumbnail" style="width: 80px;margin-bottom: 0">
+                                                <img class="media-object " src="../img/shopped/list-2.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="media-body media-middle">
+                                            <span>闪亮姨妈色</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-xs-2 unit-price" style="vertical-align: middle">
+                            77
+                        </td>
+                        <td class="col-xs-2 " style="vertical-align: middle">
+                            <span class="glyphicon glyphicon-minus myBtn"></span>
+                            <input class="text-center" value="1" type="text" disabled
+                                   style="width: 2em;outline: none;border: none ">
+                            <span class="glyphicon glyphicon-plus myBtn"></span>
+                        </td>
+                        <td class="col-xs-2 subtotal" style="vertical-align: middle">
+                            77
+                        </td>
+                        <td class="col-xs-2 text-center" style="vertical-align: middle">
+                            <div><a href="">移入收藏夹</a></div>
+                            <div><a class="" data-toggle="modal" data-target="#myModal" href="#">删除</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-xs-4 text-muted">
+                            <div class="row">
+                                <div class="col-xs-2 text-center">
+                                    <span class="yMiddle myBtn selItem"></span>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#" class="thumbnail" style="width: 80px;margin-bottom: 0">
+                                                <img class="media-object " src="../img/shopped/list-3.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="media-body media-middle">
+                                            <span>魅力正红色</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-xs-2 unit-price" style="vertical-align: middle">
+                            88
+                        </td>
+                        <td class="col-xs-2 " style="vertical-align: middle">
+                            <span class="glyphicon glyphicon-minus myBtn"></span>
+                            <input class="text-center" value="1" type="text" disabled
+                                   style="width: 2em;outline: none;border: none ">
+                            <span class="glyphicon glyphicon-plus myBtn"></span>
+                        </td>
+                        <td class="col-xs-2 subtotal" style="vertical-align: middle">
+                            88
+                        </td>
+                        <td class="col-xs-2 text-center" style="vertical-align: middle">
+                            <div><a href="">移入收藏夹</a></div>
+                            <div><a class="" data-toggle="modal" data-target="#myModal" href="#">删除</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-xs-4 text-muted">
+                            <div class="row">
+                                <div class="col-xs-2 text-center">
+                                    <span class="yMiddle myBtn selItem"></span>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#" class="thumbnail" style="width: 80px;margin-bottom: 0">
+                                                <img class="media-object " src="../img/shopped/list-4.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="media-body media-middle">
+                                            <span>暖情豆沙色</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-xs-2 unit-price" style="vertical-align: middle">
+                            998
+                        </td>
+                        <td class="col-xs-2 " style="vertical-align: middle">
+                            <span class="glyphicon glyphicon-minus myBtn"></span>
+                            <input class="text-center" value="1" type="text" disabled
+                                   style="width: 2em;outline: none;border: none ">
+                            <span class="glyphicon glyphicon-plus myBtn"></span>
+                        </td>
+                        <td class="col-xs-2 subtotal" style="vertical-align: middle">
+                            998
+                        </td>
+                        <td class="col-xs-2 text-center" style="vertical-align: middle">
+                            <div><a href="">移入收藏夹</a></div>
+                            <div><a class="" data-toggle="modal" data-target="#myModal" href="#">删除</a></div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="panel-footer">
+            <div class="row" style="line-height: 34px">
+                <div class="col-xs-1  text-muted minFont">
+                    <span class="foot-btn myBtn selAll"></span><span>&nbsp;全选</span>
+                </div>
+                <div class="col-xs-1 text-muted minFont">
+                    <span class="foot-btn myBtn noSel"></span><span>&nbsp;全不选</span>
+                </div>
+                <div class="col-xs-2 col-xs-offset-5">
+                    已选商品 <span class="account selNum">0</span> 件
+                </div>
+                <div class="col-xs-2">
+                    合计(不含运费):<span class="account totalPrice">0</span> 元
+                </div>
+                <div class="col-xs-1">
+                    <button type="submit" href="#" class="btn btn-danger disabled">结算</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="jkj-footer">
+    <div class="footerTop">
+        <div class="footerService">
+            <div class="service1">
+                <a href="offline.html" target="_self">
+                    <h3>线下体验</h3>   <!-- 斜体显示 -->
+                    <p>
+                        <span>2300 +</span>
+                        <span>全国门店邀您体验</span>
+                    </p>
+                </a>
+            </div>
+
+            <div class="service2">
+                <a href="myOrderList.html" target="_self">
+                    <h3>服务支持</h3>
+                    <p>
+                        <span>获取更多支持</span>
+                        <span>售前咨询，售后保障</span>
+                    </p>
+                </a>
+            </div>
+
+            <div class="service3">
+                <a href="firsrPage.html" target="_blank">
+                    <h3>在线选购</h3>
+                    <p>
+                        <span>15天换货保障</span>
+                        <span>7天无理由退换货</span>
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="onliveServer">
+            <span>24小时全国服务热线</span>
+            <p class="tel">184-3520-7089</p>
+            <div>
+                <a class="onliveBtn" href="javascript:void 0;" style="line-height: 40px">
+                    <span class="glyphicon glyphicon-comment" style="line-height: 40px"></span>
+                    <span> 在线客服</span>
+                </a>
+                <img id="erwei" src="../img/firsrPage/footer/erwei.png" alt="在这里">
+            </div>
+
+        </div>
+    </div>
+
+
+    <hr class="hr"/>
+    <div class="footBottom">
+        <ul class="aboutUs">
+            <li>
+                <a href="aboutUs.html">联系我们</a> <span></span>
+            </li>
+        </ul>
+
+        <div class="last">
+            ©2017 Meizu Telecom Equipment Co., Ltd. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+            <a target="_blank" href="#">粤ICP备13003602号</a>
+            <a target="_blank" href="#">合字B2-20170010 </a>
+            <a target="_blank" href="#">营业执照</a>
+            <a target="_blank" href="#">法律声明</a>
+            <a target="_blank" href="">
+                粤公网安备 44049102496009 号
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+<script>
+    /* 加减按钮的设置 */
+    $(".glyphicon-minus").click(function () {
+        $(this).next().val() > 0 ? $(this).next().val($(this).next().val() - 0 - 1) : "";
+
+        num()
+    });
+    $(".glyphicon-plus").click(function () {
+        $(this).prev().val($(this).prev().val() - 0 + 1);
+
+        num()
+    })
+
+    /* 单选按钮 */
+    $(".selItem").click(function () {
+        !$(this).hasClass('active') ? $(this).addClass("active") : $(this).removeClass("active");
+
+        num()
+    });
+
+    /* 全选 */
+    $('.selAll').click(function () {
+        $(this).removeClass("active");
+        $('.selAll').addClass("active");
+        $(".selItem").addClass("active");
+
+        num()
+    });
+
+    /* 全不选 */
+    $('.noSel').click(function () {
+        $(this).addClass("active");
+        $('.selAll').removeClass("active");
+        $(".selItem").removeClass("active");
+
+        num();
+    });
+
+    function num() {
+        var totalNum = 0;
+        var subtotal = 0;
+        var totalPrice=0;
+        $(".selItem").each(function () {
+            if ($(this).hasClass("active")) {
+                var nowNum = $(this).closest("tr").find("input").val() - 0;
+                var unitPrice=$(this).closest("tr").find(".unit-price").html()-0;
+                $(this).closest("tr").find(".subtotal").html(nowNum*unitPrice);
+
+                totalNum += nowNum;
+                /* 计算总价 */
+                totalPrice+=nowNum*unitPrice;
+
+            }
+        });
+
+        /* 设置已经选择的个数 */
+        $(".selNum").html(totalNum);
+        $(".totalPrice").html(totalPrice)
+
+    }
+</script>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/header&footer.css">
+    <link rel="stylesheet" href="../css/bbCreamMain.css">
+	<script src="../JS/jquery-1.6.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <title>bbCream</title>
+    <style>
+        .bb-products-div>div{
+            cursor: pointer;
+        }
+        .jkj-subMenu{
+            position: fixed;
+            top: 0;
+            left:0;
+            z-index: 10000;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="lt">
+        <a href="firsrPage.html"><img src="../img/logo/logo1.png" alt=""></a>
+    </div>
+    <ul class="mid">
+        <li>
+            <a href="lipstick.html">口红</a>
+        </li>
+        <li>
+            <a href="bbCream.html">BB霜</a>
+        </li>
+        <li>
+            <a href="eyeShadow.html">眼影</a>
+        </li>
+        <li>
+            <a href="blusher.html">腮红</a>
+        </li>
+    </ul>
+    <div class="rt">
+        <div class="rtItem">
+            <a href="login.html">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+            <div id="subUser">
+                <span class="triangle"></span>
+                <dl class="userFace">
+                    <dd>
+                        <img src="https://account.smartisan.com/files/00/3a/1f/55/avatar.png">
+                    </dd>
+                    <dt>破刃之剑101</dt>
+                </dl>
+
+                <ul>
+                    <li class="order">
+
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-th-list"></span>我的订单</a>
+                    </li>
+                    <li class="support">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-list-alt"></span>售后服务</a>
+                    </li>
+                    <li class="coupon">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-tags"></span>我的优惠</a>
+                    </li>
+                    <li class="information">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-tasks"></span>账户资料</a>
+                    </li>
+                    <li class="address">
+                        <a href="myOrderList.html"><span class="glyphicon glyphicon-send"></span>收货地址</a>
+                    </li>
+                    <li class="logout">
+                        <a href="#"><span class="glyphicon glyphicon-remove-circle"></span>退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rtItem">
+            <a href="shopingCar.html">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+            </a>
+            <div id="subShopping">
+                <!-- 这里直接跳转吧  工作量太大了 -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--顶部标志性图片-->
+<div class="bb-toppart">
+    <div class="bb-hdeputy">
+        <div class="bb-hdeputy-white">related</div>
+    </div>
+</div>
+<div class="bb-bodytop">
+    <div class="bb-bodywhite">
+        <div class="bb-bodywhite-content">
+            <h3>looking for </h3>
+            <div class="bb-bodywhite-content-div">
+                <span>RIGHT METHID</span>
+                <a href="https://jingyan.baidu.com/article/a3aad71af8629cb1fb009618.html">ENTER</a>
+            </div>
+        </div>
+    </div>
+    <span class="bb-bodytopspan"></span>
+</div>
+<!--商品陈列区-->
+<div class="bb-body">
+    <div class="bb-products"><!--每个商品所在div-->
+        <a href="#"><img src="../img/bbCream/21.jpg"/></a>
+        <div class="bb-products-div">
+            <span class="bb-products-div-span1">兰芝</span>
+            <span class="bb-products-div-span2">皙润亮肤遮瑕气垫BB霜自然色   其他颜色</span>
+            <span class="bb-products-div-span3">￥78.00</span>
+            <span class="bb-products-div-span4">全网销量1985</span>
+            <div class="bb-products-div-div1 openPage"
+				data-name="兰芝"
+				data-info="皙润亮肤遮瑕气垫BB霜自然色   其他颜色"
+				data-price="78"
+				data-src="../img/bbCream/21.jpg"
+			>查看详情</div>
+            <div class="bb-products-div-div2 shoppingFly">加入购物车</div>
+        </div>
+    </div>
+    <div class="bb-products">
+        <a href="#"><img src="../img/bbCream/45.jpg"/></a>
+        <div class="bb-products-div">
+            <span class="bb-products-div-span1">雪花秀</span>
+            <span class="bb-products-div-span2">雪花秀采淡致美气垫BB霜粉底霜遮瑕防晒   隔离</span>
+            <span class="bb-products-div-span3">￥278.00</span>
+            <span class="bb-products-div-span4">全网销量542</span>
+            <div class="bb-products-div-div1 openPage"
+				data-name="雪花秀"
+				data-info="雪花秀采淡致美气垫BB霜粉底霜遮瑕防晒   隔离"
+				data-price="278"
+				data-src="../img/bbCream/45.jpg"
+			>查看详情</div>
+            <div class="bb-products-div-div2 shoppingFly">加入购物车</div>
+        </div>
+    </div>
+    <div class="bb-products">
+        <a href="#"><img src="../img/bbCream/112.jpg"/></a>
+        <div class="bb-products-div">
+            <span class="bb-products-div-span1">丸美</span>
+            <span class="bb-products-div-span2">鲜颜焕亮气垫BB霜15g自然色        (不含替换装) (遮瑕  美肤)</span>
+            <span class="bb-products-div-span3">￥158.00</span>
+            <span class="bb-products-div-span4">全网销量96.1万</span>
+            <div class="bb-products-div-div1 openPage"
+				data-name="丸美"
+				data-info="鲜颜焕亮气垫BB霜15g自然色        (不含替换装) (遮瑕  美肤)"
+				data-price="158"
+				data-src="../img/bbCream/112.jpg"
+			>查看详情</div>
+            <div class="bb-products-div-div2 shoppingFly">加入购物车</div>
+        </div>
+    </div>
+    <div class="bb-products">
+        <a href="#"><img src="../img/bbCream/33a7d12aef3ec512.jpg"/></a>
+        <div class="bb-products-div">
+            <span class="bb-products-div-span1">兰芝</span>
+            <span class="bb-products-div-span2">气垫BB霜裸妆遮瑕强     粉扑滋润保湿隔离粉底      裸妆不已脱妆</span>
+            <span class="bb-products-div-span3">￥69.00</span>
+            <span class="bb-products-div-span4">全网销量1.2万</span>
+            <div class="bb-products-div-div1 openPage"
+				data-name="兰芝"
+				data-info="气垫BB霜裸妆遮瑕强     粉扑滋润保湿隔离粉底      裸妆不已脱妆"
+				data-price="69"
+				data-src="../img/bbCream/33a7d12aef3ec512.jpg"
+			>查看详情</div>
+            <div class="bb-products-div-div2 shoppingFly">加入购物车</div>
+        </div>
+    </div>
+    <div class="bb-products">
+        <a href="#"><img src="../img/bbCream/31125_P_1402891504896.JPG"/></a>
+        <div class="bb-products-div">
+            <span class="bb-products-div-span1">兰芝</span>
+            <span class="bb-products-div-span2">LANEIGE气垫隔离防晒BB霜15*2g  (送替换装)</span>
+            <span class="bb-products-div-span3">￥178.00</span>
+            <span class="bb-products-div-span4">全网销量6.1万</span>
+            <div class="bb-products-div-div1 openPage"
+				data-name="兰芝"
+				data-info="LANEIGE气垫隔离防晒BB霜15*2g  (送替换装)"
+				data-price="178"
+				data-src="../img/bbCream/31125_P_1402891504896.JPG"
+			>查看详情</div>
+            <div class="bb-products-div-div2 shoppingFly">加入购物车</div>
+        </div>
+    </div>
+    <div class="bb-products">
+        <a href="#"><img src="../img/bbCream/234.jpg"/></a>
+        <div class="bb-products-div">
+            <span class="bb-products-div-span1">百雀羚</span>
+            <span class="bb-products-div-span2">百雀羚气韵气垫BB霜    草本肌源透润修容霜     遮瑕保湿</span>
+            <span class="bb-products-div-span3">￥299.00</span>
+            <span class="bb-products-div-span4">全网销量4.1万</span>
+            <div class="bb-products-div-div1 openPage"
+				data-name="百雀羚"
+				data-info="百雀羚气韵气垫BB霜    草本肌源透润修容霜     遮瑕保湿"
+				data-price="299"
+				data-src="../img/bbCream/234.jpg"
+			>查看详情</div>
+            <div class="bb-products-div-div2 shoppingFly">加入购物车</div>
+        </div>
+    </div>
+    <div class="bb-products">
+        <a href="#"><img src="../img/bbCream/54f81701Nf285412c.jpg"/></a>
+        <div class="bb-products-div">
+            <span class="bb-products-div-span1">兰芝</span>
+            <span class="bb-products-div-span2">无暇矿物质气垫BB霜   遮瑕隔离      保湿粉底</span>
+            <span class="bb-products-div-span3">￥69.00</span>
+            <span class="bb-products-div-span4">全网销量9.1万</span>
+            <div class="bb-products-div-div1 openPage"
+				data-name="兰芝"
+				data-info="无暇矿物质气垫BB霜   遮瑕隔离      保湿粉底"
+				data-price="69"
+				data-src="../img/bbCream/54f81701Nf285412c.jpg"
+			>查看详情</div>
+            <div class="bb-products-div-div2 shoppingFly">加入购物车</div>
+        </div>
+    </div>
+    <div class="bb-products">
+        <a href="#"><img src="../img/bbCream/13580.png"/></a>
+        <div class="bb-products-div">
+            <span class="bb-products-div-span1">雪花秀</span>
+            <span class="bb-products-div-span2">雪花秀采淡致美气垫BB霜粉底霜   遮瑕保湿</span>
+            <span class="bb-products-div-span3">￥299.00</span>
+            <span class="bb-products-div-span4">全网销量96.1万</span>
+            <div class="bb-products-div-div1 openPage"
+				data-name="雪花秀"
+				data-info="雪花秀采淡致美气垫BB霜粉底霜遮瑕防晒   遮瑕保湿"
+				data-price="299"
+				data-src="../img/bbCream/13580.png"
+			>查看详情</div>
+            <div class="bb-products-div-div2 shoppingFly">加入购物车</div>
+        </div>
+    </div>
+    <div class="bb-products">
+        <a href="#"><img src="../img/bbCream/12374303_997933.jpg"/></a>
+        <div class="bb-products-div">
+            <span class="bb-products-div-span1">赫拉</span>
+            <span class="bb-products-div-span2">遮瑕嫩白防晒隔离多功能UV气垫BB霜    +替换装</span>
+            <span class="bb-products-div-span3">￥259.00</span>
+            <span class="bb-products-div-span4">全网销量3.1万</span>
+            <div class="bb-products-div-div1 openPage"
+				data-name="赫拉"
+				data-info="遮瑕嫩白防晒隔离多功能UV气垫BB霜    +替换装"
+				data-price="259"
+				data-src="../img/bbCream/12374303_997933.jpg"
+			>查看详情</div>
+            <div class="bb-products-div-div2 shoppingFly">加入购物车</div>
+        </div>
+    </div>
+    <div class="bb-products">
+        <a href="#"><img src="../img/bbCream/05.jpg"/></a>
+        <div class="bb-products-div">
+            <span class="bb-products-div-span1">雪融肌</span>
+            <span class="bb-products-div-span2">雪润无暇气垫BB霜 15g  其他颜色 </span>
+            <span class="bb-products-div-span3">￥69.00</span>
+            <span class="bb-products-div-span4">全网销量9万</span>
+            <div class="bb-products-div-div1 openPage"
+				data-name="雪融肌"
+				data-info="雪润无暇气垫BB霜 15g  其他颜色"
+				data-price="69"
+				data-src="../img/bbCream/05.jpg"
+			>查看详情</div>
+            <div class="bb-products-div-div2 shoppingFly">加入购物车</div>
+        </div>
+    </div>
+    <div class="bb-products">
+        <a href="#"><img src="../img/bbCream/06.jpg"/></a>
+        <div class="bb-products-div">
+            <span class="bb-products-div-span1">雪花秀</span>
+            <span class="bb-products-div-span2">雪花秀气垫BB霜   性感底妆裸妆 保湿遮瑕 送替换装   </span>
+            <span class="bb-products-div-span3">￥289.00</span>
+            <span class="bb-products-div-span4">全网销量6.1万</span>
+            <div class="bb-products-div-div1 openPage"
+				data-name="雪花秀"
+				data-info="雪花秀气垫BB霜   性感底妆裸妆    保湿遮瑕    送替换装"
+				data-price="289"
+				data-src="../img/bbCream/06.jpg"
+			>查看详情</div>
+            <div class="bb-products-div-div2 shoppingFly">加入购物车</div>
+        </div>
+    </div>
+    <div class="bb-products">
+        <a href="#"><img src="../img/bbCream/224.jpg"/></a>
+        <div class="bb-products-div">
+            <span class="bb-products-div-span1">圣罗兰</span>
+            <span class="bb-products-div-span2">YSL圣罗兰恒久完美气垫BB霜14g SPF23 PA++羽毛气垫持久裸妆</span>
+            <span class="bb-products-div-span3">￥488.00</span>
+            <span class="bb-products-div-span4">全网销量5.1万</span>
+            <div class="bb-products-div-div1 openPage"
+				data-name="圣罗兰"
+				data-info="YSL圣罗兰恒久完美气垫BB霜14g SPF23 PA++羽毛气垫持久裸妆"
+				data-price="488"
+				data-src="../img/bbCream/224.jpg"
+			>查看详情</div>
+            <div class="bb-products-div-div2 shoppingFly">加入购物车</div>
+        </div>
+    </div>
+</div>
+<!--底部图片-->
+<div class="bb-bottompart">
+    <div class="bb-bpic">
+        <a href="#"><img src="../img/bbCream/103.jpg"/></a>
+        <a href="#"><img src="../img/bbCream/30e.jpg"/></a>
+        <a href="#"><img src="../img/bbCream/53829833a7952.jpg"/></a>
+    </div>
+</div>
+
+
+<footer class="jkj-footer">
+    <div class="footerTop">
+        <div class="footerService">
+            <div class="service1">
+                <a href="offline.html" target="_self">
+                    <h3>线下体验</h3>   <!-- 斜体显示 -->
+                    <p>
+                        <span>2300 +</span>
+                        <span>全国门店邀您体验</span>
+                    </p>
+                </a>
+            </div>
+
+            <div class="service2">
+                <a href="myOrderList.html" target="_self">
+                    <h3>服务支持</h3>
+                    <p>
+                        <span>获取更多支持</span>
+                        <span>售前咨询，售后保障</span>
+                    </p>
+                </a>
+            </div>
+
+            <div class="service3">
+                <a href="firsrPage.html" target="_blank">
+                    <h3>在线选购</h3>
+                    <p>
+                        <span>15天换货保障</span>
+                        <span>7天无理由退换货</span>
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="onliveServer">
+            <span>24小时全国服务热线</span>
+            <p class="tel">184-3520-7089</p>
+            <div>
+                <a class="onliveBtn" href="javascript:void 0;" style="line-height: 40px">
+                    <span class="glyphicon glyphicon-comment" style="line-height: 40px"></span>
+                    <span> 在线客服</span>
+                </a>
+                <img id="erwei" src="../img/firsrPage/footer/erwei.png" alt="在这里">
+            </div>
+
+        </div>
+    </div>
+
+
+    <hr class="hr"/>
+    <div class="footBottom">
+        <ul class="aboutUs">
+            <li>
+                <a href="aboutUs.html">联系我们</a> <span></span>
+            </li>
+        </ul>
+
+        <div class="last">
+            ©2017 Meizu Telecom Equipment Co., Ltd. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+            <a target="_blank" href="#">粤ICP备13003602号</a>
+            <a target="_blank" href="#">合字B2-20170010 </a>
+            <a target="_blank" href="#">营业执照</a>
+            <a target="_blank" href="#">法律声明</a>
+            <a target="_blank" href="">
+                粤公网安备 44049102496009 号
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+<script>
+    //使用JS来进行提交   --内容自己写(可以使用JS来动态添加)
+   /* var subBtns=document.querySelectorAll('.detail');
+    for(var i=0;i<subBtns.length;i++){
+        subBtns[i].onclick=function () {
+            location.href='detail.html';
+        }
+    }*/
+	$(".openPage").click(function(){
+		var data_name = $(this).attr("data-name");
+		var data_info = $(this).attr("data-info");
+		var data_price = $(this).attr("data-price");
+		var data_src = $(this).attr("data-src");
+
+		setCookie("data_name",data_name);
+		setCookie("data_info",data_info);
+		setCookie("data_price",data_price);
+		setCookie("data_src",data_src);
+		window.location.href = "detail.html";
+		});
+	//设置cookie
+	function setCookie(name, value, seconds) {
+		 seconds = seconds || 0; //seconds有值就直接赋值，没有为0，这个根php不一样。
+		 var expires = "";
+		 if (seconds != 0 ) { //设置cookie生存时间
+		 var date = new Date();
+		 date.setTime(date.getTime()+(seconds*1000));
+		 expires = "; expires="+date.toGMTString();
+		 }
+		 document.cookie = name+"="+escape(value)+expires+"; path=/"; //转码并赋值
+	}
+
+</script>
+</html>

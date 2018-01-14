@@ -1,0 +1,176 @@
+.bb-toppart{/*顶部标志性图片*/
+    width:100%;
+    height:600px;
+    position:relative;
+    background-image: url(../img/bbCream/30.jpg);
+    background-position-y:-5px;
+    background-size:cover;
+}
+
+.bb-hdeputy{
+    width:1109px;
+    padding:0 120px;
+    position:absolute;
+    bottom:0;
+}
+.bb-hdeputy-white{/*related部分*/
+    width:1079px;
+    height:60px;
+    background-color:white;
+    line-height:60px;
+    padding-left:30px;
+}
+.bb-bodytop{  /*商品上面div*/
+    width:1109px;
+    height:303px;
+    padding:0 120px;
+}
+.bb-bodywhite{
+    width:869px;
+    height:243px;
+    padding:0 120px;
+    background-color:white;
+}
+.bb-bodywhite-content{
+    width:869px;
+    height:153px;
+    padding:30px 0 60px 0;
+}
+.bb-bodywhite-content h3{
+    width:869px;
+    height:33px;
+}
+.bb-bodywhite-content-div{
+    width:809px;
+    height:30px;
+    border:1px #D3D3D3 solid;
+    margin:20px 0;
+    padding:25px 30px;
+}
+.bb-bodywhite-content-div a{/*进入按钮*/
+    width:120px;
+    height:30px;
+    display:block;
+    line-height:30px;
+    text-align:center;
+    background-color:#272727;
+    color:white;
+    float:right;
+    text-decoration: none;
+}
+.bb-bodytopspan{
+    width:100%;
+    height:60px;
+    background-color:#F3F3F3;
+    display:block;
+}
+.bb-body{    /*主体内容       商品区          开始*/
+    width:1109px;
+    height:2243.699px;
+    padding:0 120px;
+}
+.bb-products{
+    width:353.5px;
+    height:537.141px;
+    padding:8px;
+    float:left;
+}
+.bb-products a{
+    width:353.5px;
+    height:350px;
+    display:block;
+    background-color:#F9F9F9;
+}
+.bb-products a img{
+    width:353.5px;
+    height:350px;
+}
+.bb-products-div{
+    width:313.5px;
+    height:167.141px;
+    background-color:white;
+    padding:10px 20px;
+    position:relative;
+}
+.bb-products-div span{
+    display:block;
+    margin-bottom:12px;
+}
+.bb-products-div-span1{
+    color:#75583E;
+    font-weight: bold;
+    font-size:20px;
+}
+.bb-products-div-span2{
+    font-size:15px;
+    height:20px;
+}
+.bb-products-div-span3{
+    color:red;
+    font-size:20px;
+    width:70px;
+    position:relative;
+    top:10px;
+}
+.bb-products-div-span4{
+    color:#c1c1c1;
+    font-size:10px;
+    position:absolute;
+    bottom:65px;
+    right:50px;
+}
+.bb-products-div-div1{
+    width:60px;
+    height:35px;
+    line-height:35px;
+    font-size:15px;
+    padding:0 10px;
+    border:1px #c1c1c1 solid;
+    float:left;
+    margin-top:15px;
+    margin-right:50px;
+}
+.bb-products-div-div2{
+    width:80px;
+    height:35px;
+    display:block;
+    line-height:35px;
+    font-size:15px;
+    padding:0 10px;
+    border:1px #c1c1c1 solid;
+    margin-top:15px;
+    float:left;
+}
+/*主体内容       商品区          结束*/
+.bb-bottompart{     /*底部div*/
+    background-color:white;
+    padding-bottom: 60px;
+}
+.bb-bpic{    /*底部图片div*/
+    width:1040px;
+    height:311px;
+    padding:60px 40px 0 40px;
+    margin:0 114.5px;
+    background-color:white;
+}
+.bb-bpic a{/*底部存放图片的a*/
+    width:220px;
+    height:311px;
+    display:block;
+    padding-right:40px;
+    float:left;
+}
+.bb-bpic a:nth-of-type(3){
+    width:520px;
+    height:311px;
+    display:inline-block;
+    padding-right:0;
+}
+.bb-bpic a img{
+    width:220px;
+    height:311px;
+}
+.bb-bpic a:nth-of-type(3) img{
+    width:520px;
+    height:311px;
+}

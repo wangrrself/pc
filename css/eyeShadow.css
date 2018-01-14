@@ -1,0 +1,170 @@
+.bb-bodytop{
+
+}
+
+
+
+
+
+/*        头部文件                         */
+body {
+    width: 100%;
+    background: #eee;
+    opacity: 0.9;
+}
+
+.lt-header {
+    width: 100%;
+    height: 100px;
+    background: black;
+    color: #FFFFFF;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+}
+
+/*-----------------眼影内容-----------------*/
+/*   轮播图    */
+.lt-slider {
+    margin: 0 auto;
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.lt-slider img {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.lt-show-image {
+    display: block;
+}
+
+/*-------眼影导航-------*/
+.lt-products-nav {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    padding: 25px 0;
+    margin: 0 auto;
+}
+
+.lt-products-nav div {
+    width: 100%;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 10px;
+    color: #666;
+    font-family: "微软雅黑";
+    text-align: center;
+    line-height: 60px;
+    background: #FFFFFF;
+}
+
+/*----------产品内容---------*/
+/*左侧内容*/
+.lt-products {
+    width: 1000px;
+    height: 430px;
+    margin: 20px auto;
+    background: #FFFFFF;
+    border: 1px solid #FAFAFA;
+    border-radius: 8px;
+    behavior: url(../js/PIE.htc);
+    position: relative;
+    top: 0;
+}
+
+.lt-products:hover {
+    -moz-box-shadow: 5px 5px 10px 1px #ccc;
+    -webkit-box-shadow: 5px 5px 10px 1px #ccc;
+    box-shadow: 5px 5px 10px 1px #ccc;
+    top: -5px;
+}
+
+.lt-products img {
+    width: 425px;
+    height: 425px;
+    float: left;
+}
+
+/*右侧内容*/
+.lt-products-content {
+    display: inline-block;
+    width: 490px;
+    height: 330px;
+    padding: 50px 40px;
+}
+
+.lt-products-name {
+    width: 490px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px 0;
+    border-bottom: 1px #888888 solid;
+}
+
+.lt-products-list li {
+    display: flex;
+    width: 490px;
+    padding: 15px 0;
+    border-bottom: 1px dashed #999999;
+    list-style: none;
+}
+
+.lt-products-list-span1 {
+    font-size: 14px;
+    color: #595758;
+    box-sizing: border-box;
+    width: 15%;
+}
+
+.lt-products-list-span2 {
+    font-size: 12px;
+    color: #999;
+    line-height: 160%;
+    box-sizing: border-box;
+    width: 85%;
+}
+
+.lt-products-buy {
+    width: 490px;
+    height: 60px;
+    padding: 20px 0;
+
+}
+
+.lt-products-buy div {
+    display: inline-block;
+    width: 150px;
+    height: 20px;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.lt-products-buy-span1 {
+    font-size: 14px;
+    color: #B299B2;
+}
+
+.lt-products-buy-span2 {
+    font-size: 20px;
+    color: #D44D44;
+}
+
+.lt-products-buy input {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    color: #FFFFFF;
+    background: #749AF3;
+    float: right;
+    border-radius: 10px;
+    behavior: url(../js/PIE.htc);
+}
